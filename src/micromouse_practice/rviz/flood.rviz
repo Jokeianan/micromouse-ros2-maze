@@ -1,0 +1,98 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 35; 38; 46
+    Fixed Frame: map
+    Frame Rate: 12
+  Displays:
+    - Class: rviz_default_plugins/Map
+      Name: Online SLAM map - white free black occupied gray unknown
+      Enabled: true
+      Topic:
+        Value: /map
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Alpha: 0.85
+      Color Scheme: map
+    - Class: rviz_default_plugins/RobotModel
+      Name: TurtleBot3
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/LaserScan
+      Name: Live laser scan
+      Enabled: true
+      Topic:
+        Value: /scan
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Size (m): 0.025
+      Color: 255; 70; 80
+      Color Transformer: FlatColor
+      Style: Points
+    - Class: rviz_default_plugins/Path
+      Name: Driven trail
+      Enabled: true
+      Topic:
+        Value: /trajectory
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Color: 0; 230; 255
+      Line Style: Billboards
+      Line Width: 0.01
+      Buffer Length: 1
+    - Class: rviz_default_plugins/Path
+      Name: Flood-fill route
+      Enabled: true
+      Topic:
+        Value: /reference_path
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+      Color: 255; 170; 40
+      Line Style: Billboards
+      Line Width: 0.025
+      Buffer Length: 1
+    - Class: rviz_default_plugins/Path
+      Name: Predicted local trajectory
+      Enabled: true
+      Topic:
+        Value: /local_trajectory
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 1
+      Color: 100; 255; 80
+      Line Style: Billboards
+      Line Width: 0.025
+      Buffer Length: 1
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Mapping top view
+      Target Frame: base_footprint
+      Scale: 40
+      X: 0.0
+      Y: 0.0
+      Angle: 0
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+Window Geometry:
+  Width: 1100
+  Height: 760

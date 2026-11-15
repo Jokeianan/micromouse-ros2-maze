@@ -1,0 +1,65 @@
+# Adapted from SLAM Toolbox humble/config/mapper_params_online_async.yaml.
+# https://github.com/SteveMacenski/slam_toolbox/blob/humble/config/mapper_params_online_async.yaml
+# This starts with an EMPTY map. No world file, prior map, or pose graph input.
+slam_toolbox:
+  ros__parameters:
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    ceres_loss_function: None
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+    scan_topic: /scan
+    use_map_saver: false
+    mode: mapping
+    debug_logging: false
+    throttle_scans: 1
+    scan_queue_size: 5
+    transform_publish_period: 0.05
+    map_update_interval: 1.0
+    resolution: 0.04
+    restamp_tf: false
+    min_laser_range: 0.12
+    max_laser_range: 3.5
+    minimum_time_interval: 0.1
+    transform_timeout: 0.5
+    tf_buffer_duration: 30.0
+    stack_size_to_use: 40000000
+    enable_interactive_mode: false
+    use_scan_matching: true
+    use_scan_barycenter: false
+    minimum_travel_distance: 0.08
+    minimum_travel_heading: 0.12
+    scan_buffer_size: 10
+    scan_buffer_maximum_scan_distance: 1.0
+    link_match_minimum_response_fine: 0.15
+    link_scan_maximum_distance: 0.4
+    loop_search_maximum_distance: 2.0
+    # Repeated, near-identical maze corridors produced false loop closures.
+    # Keep scan-to-local-map matching, but do not auto-close ambiguous loops.
+    do_loop_closing: false
+    loop_match_minimum_chain_size: 20
+    loop_match_maximum_variance_coarse: 1.5
+    loop_match_minimum_response_coarse: 0.55
+    loop_match_minimum_response_fine: 0.75
+    correlation_search_space_dimension: 0.08
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.02
+    loop_search_space_dimension: 4.0
+    loop_search_space_resolution: 0.05
+    loop_search_space_smear_deviation: 0.03
+    # The simulator provides good odometry; near-identical corridors are weak
+    # along their length. Strong priors prevent accumulating spurious shifts.
+    distance_variance_penalty: 0.0025
+    angle_variance_penalty: 0.0001
+    fine_search_angle_offset: 0.000872665
+    coarse_search_angle_offset: 0.0174533
+    coarse_angle_resolution: 0.00872665
+    minimum_angle_penalty: 0.0001
+    minimum_distance_penalty: 0.0001
+    use_response_expansion: false
+    min_pass_through: 2
+    occupancy_threshold: 0.1

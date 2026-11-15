@@ -1,0 +1,35 @@
+# Validated control tuning is selected by tuning:=tuned.
+# tuning:=original keeps the earlier sprint/flood controller defaults.
+tb3_wall_follow:
+  ros__parameters:
+    flow_dist_gain: 1.8
+    flow_angle_gain: 2.0
+    flow_preview: 0.25
+    flow_curve_slowdown: 2.3
+    flow_speed_gain_reference: 0.22
+    flow_max_w: 1.40
+    flow_slow_distance: 1.0
+    flow_front_stop: 0.32
+    flow_front_release: 0.38
+    flow_near_left: 0.24
+    flow_side_release: 0.26
+    flow_clear_v: 0.07
+    flow_clear_w: -0.85
+    flow_acquire_v: 0.12
+    flow_acquire_w: 0.65
+    flow_linear_accel: 0.70
+    flow_linear_decel: 1.0
+    flow_angular_accel: 6.0
+    flow_omega_filter: 0.70
+    flow_prediction_time: 0.45
+    flow_min_center_clearance: 0.20
+tb3_flood_navigation:
+  ros__parameters:
+    lookahead: 0.36
+    curvature_slowdown: 0.85
+    align_threshold: 0.65
+    linear_accel: 0.55
+    linear_decel: 0.75
+    angular_accel: 1.5
+    nominal_prediction_seconds: 0.72
+    replan_period: 0.5

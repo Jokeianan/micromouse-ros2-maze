@@ -1,0 +1,178 @@
+{
+  "l2": {
+    "world": "l2_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      4.0,
+      7.0
+    ],
+    "exit_axis": "y"
+  },
+  "l": {
+    "world": "l_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      7.0,
+      8.0
+    ],
+    "exit_axis": "x"
+  },
+  "s_shape": {
+    "world": "s_shape_maze.world",
+    "start": [
+      0.0,
+      1.0
+    ],
+    "goal": [
+      7.0,
+      9.0
+    ],
+    "exit_axis": "x"
+  },
+  "shape7": {
+    "world": "shape7_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      7.0,
+      5.0
+    ],
+    "exit_axis": "y"
+  },
+  "straight": {
+    "world": "straight_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      8.0,
+      2.0
+    ],
+    "exit_axis": "x"
+  },
+  "u": {
+    "world": "u_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      8.0,
+      6.0
+    ],
+    "exit_axis": "x"
+  },
+  "z": {
+    "world": "z_maze.world",
+    "start": [
+      0.0,
+      2.0
+    ],
+    "goal": [
+      8.0,
+      8.0
+    ],
+    "exit_axis": "y"
+  },
+  "migong": {
+    "world": "migong.world",
+    "start": [
+      -5.52,
+      -3.48
+    ],
+    "goal": [
+      5.45,
+      3.48
+    ],
+    "exit_axis": "x",
+    "entry_x": -4.55,
+    "exit_entry_x": 4.95,
+    "exit_tolerance": 0.25,
+    "wall_distance": 0.4,
+    "front_stop": 0.32,
+    "near_left": 0.22,
+    "acquire_distance": 1.15,
+    "max_v": 0.18,
+    "fast_max_v": 0.22,
+    "fast_max_w": 1.1,
+    "fast_slow_distance": 0.65,
+    "sprint_max_v": 0.5,
+    "sprint_max_w": 1.4,
+    "sprint_slow_distance": 1.05,
+    "planning": {
+      "resolution": 0.04,
+      "robot_radius": 0.13,
+      "safety_margin": 0.11,
+      "tracking_margin": 0.05,
+      "bounds": [
+        -6.0,
+        -6.0,
+        6.0,
+        6.0
+      ],
+      "interior": [
+        -4.72,
+        -4.72,
+        4.72,
+        4.72
+      ],
+      "gate_half_width": 0.18,
+      "max_v": 0.5
+    }
+  },
+  "migong_smooth": {
+    "world": "migong_smooth.world",
+    "start": [
+      -5.52,
+      -3.48
+    ],
+    "goal": [
+      5.45,
+      3.48
+    ],
+    "exit_axis": "x",
+    "entry_x": -4.55,
+    "exit_entry_x": 4.95,
+    "exit_tolerance": 0.25,
+    "wall_distance": 0.4,
+    "front_stop": 0.32,
+    "near_left": 0.22,
+    "acquire_distance": 1.15,
+    "max_v": 0.18,
+    "fast_max_v": 0.22,
+    "fast_max_w": 1.1,
+    "fast_slow_distance": 0.65,
+    "sprint_max_v": 0.5,
+    "sprint_max_w": 1.4,
+    "sprint_slow_distance": 1.05,
+    "planning": {
+      "resolution": 0.04,
+      "robot_radius": 0.13,
+      "safety_margin": 0.11,
+      "tracking_margin": 0.05,
+      "bounds": [
+        -6.0,
+        -6.0,
+        6.0,
+        6.0
+      ],
+      "interior": [
+        -4.72,
+        -4.72,
+        4.72,
+        4.72
+      ],
+      "gate_half_width": 0.18,
+      "max_v": 0.5
+    }
+  }
+}
