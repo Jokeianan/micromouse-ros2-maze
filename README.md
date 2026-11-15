@@ -51,7 +51,7 @@ colcon build --symlink-install --packages-select maze_control micromouse_practic
 source install/setup.bash
 ```
 
-仓库为私有仓库，克隆时需要 GitHub 账号拥有访问权限。
+仓库已公开，可直接克隆。
 
 ## 终端逐步运行
 
